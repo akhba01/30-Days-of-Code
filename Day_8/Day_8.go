@@ -24,8 +24,9 @@ func main() {
         }
         if value, ok := m[query]; ok {
             fmt.Printf("%s=%d\n", query, value)
-        } else {
-            fmt.Println("Not found")
-        }
+        } 
+        if _, ok := phoneBook[query]; !ok{
+        fmt.Println("Not found")
+    }
     }
 }
